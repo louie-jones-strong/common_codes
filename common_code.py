@@ -35,6 +35,12 @@ def folder_picker(address, auto_picked = None):
 
     return output_address
 
+def seconds_to_time(input):
+    hours   = int((seconds//60)//60)
+    minutes = int((seconds//60)%60)
+    seconds = str(seconds%60)
+    return hours , minutes , seconds
+
 def sound_setup( address ):
     pygame.mixer.init()
     pygame.mixer.music.load(address)
