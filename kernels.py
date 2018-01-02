@@ -2,7 +2,6 @@ import time
 import os
 
 def f(n):
-    print("test4")
     time_mark = time.time()
     for loop in range(100):
         if n == 1:

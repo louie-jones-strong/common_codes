@@ -1,8 +1,10 @@
 from multiprocessing import Process
+import threading
 from kernels import f as f
 
 
 def split_task():
+    print("test")
     if __name__ == '__main__':
         num = [[1],[2]]
         p = num
@@ -18,6 +20,15 @@ def split_task():
 
         print(num)
 
+    return
+
+def split_task2():
+
+
+    worker = threading.Thread(target=f, name=loop , args=(arg,))
+    worker.start()
+
+    worker.join()
     return
 
 split_task()
