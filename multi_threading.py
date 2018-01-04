@@ -1,9 +1,13 @@
 from multiprocessing import Pool
-from kernels import f as f
-import time
+import importlib
+#from kernels import f as f
 
-def split_task( input_array , ):
-    pools = Pool(10)
-    output = pools.map( f , num )
+def split_task( input_array , num_of_threads , kernel ):
+    
+    test = importlib.import_module( "kernels" )
+    test = test.f()
 
-    return output
+    pools = Pool(num_of_threads)
+    outputs = pools.map( test , input_array )
+
+    return outputs

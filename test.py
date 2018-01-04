@@ -7,6 +7,6 @@ if __name__ == '__main__':
     
     time_mark = time.time()
     print(list)
-    output = multi_threading.split_task2(list)
+    output = multi_threading.split_task( list , 10 , "kernels" )
     print(output)
     print(time.time()-time_mark)

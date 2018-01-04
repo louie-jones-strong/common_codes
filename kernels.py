@@ -1,6 +1,7 @@
 import time
 import os
 
+
 def f(n):
     n = n[0]
     time_mark = time.time()
