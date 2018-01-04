@@ -1,5 +1,6 @@
 from multiprocessing import Process
 import threading
+import subprocess
 from kernels import f as f
 
 
@@ -31,4 +32,18 @@ def split_task2():
     worker.join()
     return
 
-split_task()
+def split_task3(input):
+    output = list(map(lambda x: f(x) , input ))
+    return output
+
+def split_task4():
+    print("hello")
+    cmd = "python email.py"
+    subprocess.run(cmd)
+    subprocess.Popen()
+    #output = subprocess.CompletedProcess(cmd,returncode=0)
+    #print(output)
+    print("test")
+    return
+
+split_task4()

@@ -1,15 +1,11 @@
 import multi_threading
-
-def main():
-    #multi_threading.split_task("f")
-    print("test3")
-    multi_threading.test()
-    return
-
-main()
+import time
 
 
-import tflearn
-import tensorflow
+list = [0,1,2,3,4,5,6,7,8,9]
 
-
+time_mark = time.time()
+print(list)
+output = multi_threading.split_task3(list)
+print(output)
+print(time.time()-time_mark)
