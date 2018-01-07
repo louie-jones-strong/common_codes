@@ -1,5 +1,5 @@
 import os
-import pygame
+import numpy as np
 
 def tag_edit( tag , line , type="str" ): 
     lenght_of_tag = len(tag)
@@ -20,7 +20,7 @@ def tag_edit( tag , line , type="str" ):
 
     return text_on_line
 
-def folder_picker(address, auto_picked = None):
+def folder_picker( address, auto_picked=None ):
     temp = os.listdir(address)
 
     if auto_picked == None:
@@ -35,23 +35,9 @@ def folder_picker(address, auto_picked = None):
 
     return output_address
 
-def seconds_to_time(input):
+def seconds_to_time( input ):
     hours   = int((seconds//60)//60)
     minutes = int((seconds//60)%60)
     seconds = str(seconds%60)
 
     return hours , minutes , seconds
-
-def sound_setup( address ):
-    pygame.mixer.init()
-    pygame.mixer.music.load(address)
-    return
-
-def play_sound( address=None ):
-    if address == None:
-        pygame.mixer.music.play()
-    else:
-        pygame.mixer.music.load(address)
-        pygame.mixer.music.play()
-
-    return

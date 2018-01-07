@@ -1,5 +1,12 @@
 import multi_threading
 import time
+import text_edits
+import numpy
+
+list = [[[1,2],3],[1,2,3],[1,2,3],[1]]
+output = text_edits.array_to_text(list)
+print(output)
+input()
 
 if __name__ == '__main__':
     time.sleep(1)
